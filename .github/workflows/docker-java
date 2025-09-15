@@ -1,0 +1,14 @@
+name: Docker Java
+on:
+    push:
+        branches: ["main"]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+         - name: Checkout repository
+           uses: actions/checkout@v4
+         - name: Build Docker image
+           uses: docker build -t single-java-app
+         - name: Run java 
+           uses: docker run --rm single-java-app
