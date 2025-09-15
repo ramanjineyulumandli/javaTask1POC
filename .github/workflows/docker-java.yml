@@ -9,6 +9,6 @@ jobs:
          - name: Checkout repository
            uses: actions/checkout@v4
          - name: Build Docker image
-           run: docker build -t single-java-app
+           run: docker build -t single-java-app .
          - name: Run java 
            run: docker run --rm single-java-app
